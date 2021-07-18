@@ -1,87 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Clipboard landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Clipboard landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-size: 18px;
+        }
+        
+        .landing {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(images/bg-header-desktop.png), whitesmoke;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .section-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 2em;
+            gap: 40px;
+        }
+        
+        .heading {
+            width: 540px;
+        }
+        
+        .section-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.8em;
+            gap: 40px;
+            margin-bottom: 10%;
+        }
+        
+        .snippets {
+            width: 610px;
+        }
+        
+        .logo {
+            margin: 15% 25% 0 25%;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .title {
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .description {
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 5%;
+            color: grey;
+        }
+        
+        .btns {
+            margin-bottom: 31%;
+        }
+        
+        .btns-1 {
+            margin-bottom: 3em;
+        }
+        
+        .btn-1 {
+            background: green;
+            padding: 20px 35px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 2px 1px 6px grey;
+        }
+        
+        .btn-2 {
+            background: hsl(228, 45%, 44%);
+            padding: 20px 35px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 2px 1px 6px grey;
+        }
+        
+        .img-sec {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        
+        .quick {
+            list-style: none;
+            margin-left: 25%;
+        }
+        
+        .quick li {
+            padding: 40px 40px 0 0;
+        }
+        
+        .quick li p {
+            color: grey;
+        }
+        
+        .workflow-list {
+            list-style: none;
+            display: flex;
+        }
+        
+        .workflow-list li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5%;
+        }
+        
+        .imgs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3em;
+        }
+        
+        .section-5 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.8em;
+            margin-bottom: 10%;
+        }
+        
+        .footer {
+            background: grey;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .enquiry {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .enquiry a {
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .links a {
+            padding: 10px;
+        }
+    </style>
 </head>
+
 <body>
+    <main class="landing">
+        <section class="section-1">
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <div class="heading">
+                <h1 class="title">A history of everything you copy</h1>
+                <p class="description">Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices. </p>
+            </div>
+            <div class="btns">
+                <button class="btn-1">Download for mac</button>
+                <button class="btn-2">Download for windows</button>
+            </div>
+        </section>
+        <section class="section-2">
+            <div class="snippets">
+                <h1 class="title">Keep track of your snippets</h1>
+                <p class="description"> Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.</p>
+            </div>
+            <div class="img-sec">
+                <img src="images/image-computer.png" alt="computer image" class="mac">
+                <ul class="quick">
+                    <li>
+                        <h2>Quick Search</h2>
+                        <p> Easily search your snippets by content, category, web address, application, and more.</p>
+                    </li>
+                    <li>
+                        <h2>iCloud Sync</h2>
+                        <p>Instantly saves and syncs snippets across all your devices.</p>
+                    </li>
+                    <li>
+                        <h2>Complete History</h2>
+                        <p> Retrieve any snippets from the first moment you started using the app.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-3">
+            <div class="Access">
+                <h1 class="title">Access Clipboard anywhere</h1>
+                <p class="description">Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.</p>
+            </div>
+            <img src="images/image-devices.png" alt="iphone ipad images" class="ipad">
+        </section>
+        <section class="section-4">
+            <div class="workflow">
+                <h1 class="title">Supercharge your workflow</h1>
+                <p class="description">We’ve got the tools to boost your productivity.</p>
+            </div>
+            <ul class="workflow-list">
+                <li>
+                    <img src="images/icon-blacklist.svg" alt="create blacklist" class="blacklist">
+                    <h2 class="title">Create blacklists</h2>
+                    <p class="description">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+                </li>
+                <li>
+                    <img src="images/icon-text.svg" alt="text snippets" class="text-snippets">
+                    <h2 class="title">Plain text snippets</h2>
+                    <p class="description">Remove unwanted formatting from copied text for a consistent look.</p>
+                </li>
+                <li>
+                    <img src="images/icon-preview.svg" alt="preview" class="preview">
+                    <h2 class="title">Sneak preview</h2>
+                    <p class="description"> Sneak preview Quick preview of all snippets on your Clipboard for easy access.</p>
+                </li>
+            </ul>
+            <div class="imgs">
+                <img src="images/logo-google.png" alt="google">
+                <img src="images/logo-ibm.png" alt="ibm">
+                <img src="images/logo-microsoft.png" alt="microsoft">
+                <img src="images/logo-hp.png" alt="hp">
+                <img src="images/logo-vector-graphics.png" alt="vector">
+            </div>
+        </section>
+        <section class="section-5">
+            <div class="ending">
+                <h1 class="title">Clipboard for iOS and Mac OS</h1>
+                <p class="description"> Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.</p>
+            </div>
+            <div class="btns-1">
+                <button class="btn-1">Download for mac</button>
+                <button class="btn-2">Download for windows</button>
+            </div>
+        </section>
+    </main>
 
-  A history of everything you copy
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+    <footer class="footer">
+        <img src="images/logo.svg" alt="logo" class="footer-logo">
+        <ul class="enquiry">
+            <li><a href="#home">FAQs</a></li>
+            <li><a href="#home">Contact Us</a></li>
+            <li><a href="#home">Privacy Policy</a></li>
+            <li><a href="#home">Press Kit</a></li>
+            <li><a href="#home"> Install Guide</a></li>
+        </ul>
+        <ul class="links">
+            <li>
+                <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/icon-twitter.svg" alt="twitter"></a>
+            </li>
+        </ul>
 
-  Download for iOS
-  Download for Mac
-
-  Keep track of your snippets
-
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    </footer>
 </body>
+
 </html>
